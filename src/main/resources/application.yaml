@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/profile-api
+    username: postgres
+    password: 109615
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 20000
+      idle-timeout: 30000
+
+  jpa:
+    hibernate:
+      ddl-auto: none
