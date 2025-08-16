@@ -42,3 +42,4 @@ bin/
 .DS_Store
 /build/
 /build/classes/java/main/ru/profile/
+/.gradle/

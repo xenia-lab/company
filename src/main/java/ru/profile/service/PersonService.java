@@ -2,6 +2,7 @@ package ru.profile.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.profile.model.Company;
 import ru.profile.model.Person;
 import ru.profile.repository.PersonRepository;
 
@@ -19,7 +20,13 @@ public class PersonService {
         return personRepository.save(person).getId();
     }
 
-    public void deletePerson(Long id) {
+    public boolean deletePerson(Long id) {
         personRepository.deleteById(id);
+        return false;
+    }
+
+    public Long putPerson(Long id, Person person) {
+        person.setId(id);
+        return personRepository.save(person).getId();
     }
 }

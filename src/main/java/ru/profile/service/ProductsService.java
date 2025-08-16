@@ -19,7 +19,13 @@ public class ProductsService {
         return productsRepository.save(products).getId();
     }
 
-    public void deleteProducts(Long id) {
+    public boolean deleteProducts(Long id) {
         productsRepository.deleteById(id);
+        return false;
+    }
+
+    public Long putProducts(Long id, Products products) {
+        products.setId(id);
+        return productsRepository.save(products).getId();
     }
 }

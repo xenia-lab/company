@@ -20,7 +20,13 @@ public class CompanyService {
         return companyRepository.save(company).getId();
     }
 
-    public void deleteCompany(Long id) {
+    public boolean deleteCompany(Long id) {
         companyRepository.deleteById(id);
+        return false;
+    }
+
+    public Long putCompany(Long id, Company company) {
+        company.setId(id);
+        return companyRepository.save(company).getId();
     }
 }
