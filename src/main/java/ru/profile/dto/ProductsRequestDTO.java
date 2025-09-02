@@ -11,5 +11,7 @@ public class ProductsRequestDTO {
 
     @Size(min = 1, max = 100, message = "Название продукта должно быть от 1 до 100 символов")
     @NotBlank(message = "Название продукта не может быть пустым")
-    private String name_product;
+    private String nameProduct;
+
+    private Long companyId;
 }

@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
         errorResponseDTO.setMessage(ex.getMessage());
         errorResponseDTO.setTimestamp(LocalDateTime.now());
         errorResponseDTO.setError(ex.getClass().getName());
-        errorResponseDTO.setHttpstatus(HttpStatus.NOT_FOUND);
+        errorResponseDTO.setHttpStatus(HttpStatus.NOT_FOUND);
         return errorResponseDTO;
     }
 
@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
         errorResponseDTO.setMessage(ex.getFieldError().getDefaultMessage());
         errorResponseDTO.setTimestamp(LocalDateTime.now());
         errorResponseDTO.setError(ex.getClass().getName());
-        errorResponseDTO.setHttpstatus(HttpStatus.BAD_REQUEST);
+        errorResponseDTO.setHttpStatus(HttpStatus.BAD_REQUEST);
         return errorResponseDTO;
     }
 }

@@ -16,18 +16,22 @@ public class Person {
     private Long id;
 
     @Column(name = "person_name")
-    private String person_name;
+    private String personName;
 
     @Column(name = "person_lastname")
-    private String person_lastname;
+    private String personLastname;
 
     @Column(name = "person_patronymic")
-    private String person_patronymic;
+    private String personPatronymic;
 
     @Column(name = "person_work_direction")
-    private String person_work_direction;
+    private String personWorkDirection;
 
     @Column(name = "person_phone")
-    private String person_phone;
+    private String personPhone;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_company", referencedColumnName = "id_company")
+    private Company company;
 
 }

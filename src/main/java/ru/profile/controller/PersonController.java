@@ -29,7 +29,7 @@ public class PersonController {
     @PostMapping("")
     public ResponseEntity<Long> addPerson(@Valid @RequestBody PersonRequestDTO personRequestDTO){
         return new ResponseEntity<>(
-                personService.addPerson(personMapper.toPerson(personRequestDTO)), HttpStatus.CREATED);
+                personService.addPerson(personRequestDTO), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -42,6 +42,6 @@ public class PersonController {
     public ResponseEntity<Long> updatePerson(@PathVariable("id")Long id,
                                              @RequestBody PersonRequestDTO personRequestDTO) {
         return new ResponseEntity<>(
-                personService.putPerson(id, personMapper.toPerson(personRequestDTO)), HttpStatus.OK);
+                personService.putPerson(id, personRequestDTO), HttpStatus.OK);
     }
 }

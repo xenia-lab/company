@@ -30,7 +30,7 @@ public class ProductsController {
     @PostMapping("")
     public ResponseEntity<Long> addProducts(@Valid @RequestBody ProductsRequestDTO productsRequestDTO){
         return new ResponseEntity<>(
-                productsService.addProducts(productsMapper.toProducts(productsRequestDTO)), HttpStatus.CREATED);
+                productsService.addProducts(productsRequestDTO), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -41,8 +41,8 @@ public class ProductsController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Long> updateProducts(@PathVariable("id")Long id,
-                                               @RequestBody ProductsRequestDTO productsRequestDTO) {
+                                               @RequestBody ProductsRequestDTO dto) {
         return new ResponseEntity<>(
-                productsService.putProducts(id, productsMapper.toProducts(productsRequestDTO)), HttpStatus.OK);
+                productsService.putProducts(id, dto), HttpStatus.OK);
     }
 }

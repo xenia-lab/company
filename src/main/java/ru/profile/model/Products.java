@@ -16,6 +16,9 @@ public class Products {
     private Long id;
 
     @Column(name = "name_product")
-    private String name_product;
+    private String nameProduct;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_company", referencedColumnName = "id_company")
+    private Company company;
 }

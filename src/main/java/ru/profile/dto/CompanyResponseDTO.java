@@ -6,27 +6,27 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CompanyResponseDTO {
-    private String name_company;
+    private String nameCompany;
 
-    private String description_company;
+    private String descriptionCompany;
 
-    private Boolean company_activity;
+    private Boolean companyActivity;
 
-    private String company_reliability;
+    private String companyReliability;
 
-    private String company_link_VK;
+    private String companyLinkVK;
 
-    private String company_link_website;
+    private String companyLinkWebsite;
 
-    private String company_status;
+    private String companyStatus;
 
-    private String company_ogrn;
+    private String companyOgrn;
 
-    private String company_inn;
+    private String companyInn;
 
-    private String company_kpp;
+    private String companyKpp;
 
-    private String company_okpo;
+    private String companyOkpo;
 
-    private String company_legal_address;
+    private String companyLegalAddress;
 }

@@ -6,13 +6,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PersonResponseDTO {
-    private String person_name;
+    private String personName;
 
-    private String person_lastname;
+    private String personLastname;
 
-    private String person_patronymic;
+    private String personPatronymic;
 
-    private String person_work_direction;
+    private String personWorkDirection;
 
-    private String person_phone;
+    private String personPhone;
 }
